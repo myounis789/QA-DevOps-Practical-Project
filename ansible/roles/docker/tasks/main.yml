@@ -2,4 +2,4 @@
 # tasks file for docker
 - name: 'Install Docker'
   shell: 
-    cmd: sudo apt install docker.io
+    cmd: curl https://get.docker.com/ | bash

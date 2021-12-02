@@ -4,14 +4,6 @@
     - git
     - nginx
 
-- hosts: jenkins
-  become: true
-  roles:
-    - install-modules
-    - git
-    - docker
-    - jenkins
-
 - hosts: swarm-manager
   become: true
   roles:
