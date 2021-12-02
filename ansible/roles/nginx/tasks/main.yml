@@ -1,13 +1,13 @@
 ---
 # tasks file for nginx
 - name: 'Install NGINX'
-    apt:
+  apt:
     name: nginx
     state: latest
     update_cache: true
 
 - name: 'Start NGINX Service'
-    service:
+  service:
     name: nginx
     state: started
 

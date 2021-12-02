@@ -1,9 +1,7 @@
 - hosts: load-balancer
   become: true
   roles:
-    - install-modules
     - git
-    - docker
     - nginx
 
 - hosts: jenkins
