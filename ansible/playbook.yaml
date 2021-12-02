@@ -1,0 +1,22 @@
+- hosts: load-balancer
+  become: true
+  roles:
+    - git
+    - nginx
+
+- hosts: swarm-manager
+  become: true
+  roles:
+    - install-modules
+    - git
+    - docker
+    - initialise-swarm
+    
+
+- hosts: swarm-workers
+  become: true
+  roles:
+    - install-modules
+    - git
+    - docker
+    - add-swarm-worker

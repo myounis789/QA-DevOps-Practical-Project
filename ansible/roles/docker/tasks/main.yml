@@ -1,0 +1,18 @@
+---
+# tasks file for docker
+- name: 'Install Docker'
+  shell: 
+    cmd: curl https://get.docker.com/ | bash
+  become: yes
+
+- name: 'Change user permissions to run docker'
+  shell: 
+    cmd: chmod 666 /var/run/docker.sock | sudo bash
+  become: yes 
+
+- name: "Add Jenkins to the Docker Group"
+  user:
+    name: jenkins
+    groups: docker
+    append: yes
+  become: yes
