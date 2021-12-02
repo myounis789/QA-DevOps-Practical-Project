@@ -4,6 +4,10 @@
   shell: docker node ls
   register: swarm_status
   ignore_errors: true
+
+- name: 'Install swarm module requirements'
+  pip: 
+    name: docker-py
   
 - name: 'Initialise swarm'
   shell: docker swarm init 
@@ -13,12 +17,3 @@
 - name: "Retrieving swarm info"
   docker_swarm_info:
   register: swarm_info
-
-- name: Get the Manager join-token
-  shell: docker swarm join-token --quiet manager
-  register: manager_token
-
-- name: Get the worker join-token
-  shell: docker swarm join-token --quiet worker
-  register: worker_token
-  tags: swarm
