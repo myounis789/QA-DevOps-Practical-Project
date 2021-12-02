@@ -56,17 +56,18 @@ deck = {'ASpades':'static/ace_of_spades.png',
         'QClubs':'static/queen_of_clubs2.png',
         'KClubs':'static/king_of_clubs2.png'
         }
-        
+
 @app.route('/card', methods=['POST'])
 def generate_card():
     cards = request.get_json()
     symbol = cards["symbol"]
     suit = cards["suit"]
     image_key = symbol+suit
+    card_image = deck[image_key]
     values = {'A':'Ace', '2':'Two', '3':'Three', '4':'Four', '5':'Five', '6':'Six', '7':'Seven', '8':'Eight', '9':'Nine', '10':'Ten', 'J':'Jack','Q':'Queen','K':'King'}
     value = values[symbol]
 
-    return jsonify({"value": value, "suit": suit)
+    return jsonify({"value": value, "suit": suit, "image":card_image})
 
 
 
