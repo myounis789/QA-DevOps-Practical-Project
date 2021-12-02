@@ -1,32 +1,32 @@
 - hosts: load-balancer
   become: true
   roles:
-    install-modules
-    git
-    docker
-    nginx
+    - install-modules
+    - git
+    - docker
+    - nginx
 
 - hosts: jenkins
   become: true
   roles:
-    install-modules
-    git
-    docker
-    jenkins
+    - install-modules
+    - git
+    - docker
+    - jenkins
 
 - hosts: swarm-manager
   become: true
   roles:
-    install-modules
-    git
-    docker
-    initialise-swarm
+    - install-modules
+    - git
+    - docker
+    - initialise-swarm
     
 
 - hosts: swarm-workers
   become: true
   roles:
-    install-modules
-    git
-    docker
-    add-swarm-worker
+    - install-modules
+    - git
+    - docker
+    - add-swarm-worker
