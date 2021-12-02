@@ -1,2 +1,12 @@
 ---
 # tasks file for jenkins
+- name: 'Install jenkins'
+  apt:
+  name: jenkins
+  state: latest
+  update_cache: true
+      
+- name: 'Start jenkins Service'
+  service:
+  name: jenkins
+  state: started

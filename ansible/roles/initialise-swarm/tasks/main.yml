@@ -1,0 +1,20 @@
+---
+# tasks file for initialise-swarm
+- name: 'Check if swarm has already been initialised'
+  shell: docker node ls
+  register: swarm_status
+  ignore_errors: true
+  
+- name: 'Initialise swarm'
+  shell: docker swarm init 
+  when: swarm_status.rc !=0
+  run_once: true
+
+- name: Get the Manager join-token
+  shell: docker swarm join-token --quiet manager
+  register: manager_token
+
+- name: Get the worker join-token
+  shell: docker swarm join-token --quiet worker
+  register: worker_token
+  tags: swarm
