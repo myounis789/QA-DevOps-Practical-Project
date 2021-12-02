@@ -1,0 +1,24 @@
+- hosts: load-balancer
+  become: true
+  roles:
+    git
+    nginx
+
+- hosts: jenkins
+  become: true
+  roles:
+    git
+    jenkins
+
+- hosts: swarm-manager
+  become: true
+  roles:
+    git
+    initialise-swarm
+    
+
+- hosts: swarm-workers
+  become: true
+  roles:
+    git
+    add-swarm-worker
