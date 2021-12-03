@@ -6,9 +6,6 @@ all:
     swarm-workers:
       hosts:
         worker-vm1:
-    jenkins:
-      hosts:
-        jenkins-vm:
     load-balancer:
       hosts:
         nginx-vm:
