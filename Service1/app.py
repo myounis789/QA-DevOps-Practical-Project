@@ -7,4 +7,5 @@ app = Flask(__name__)
 @app.route('/')
 def server():
     symbol = requests.get('http://service2-symbol-gen:5001/symbol')
-    return render_template('index.html', symbol=symbol.text)
+    suit = requests.get('http://service3-suit-gen:5002/suit')
+    return render_template('index.html', symbol=symbol.text, suit=suit.text)
