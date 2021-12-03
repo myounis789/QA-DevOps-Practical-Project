@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  frontend:
+    container_name: flask-app
+    image: myounis789/flask-app:latest
+    build: ./Service1
+    ports:
+      - published: 5000
+        target: 5000
+
+  service2-symbol-gen:
+    container_name: symbol
+    image: myounis789/symbol:latest
+    build: ./Service2
+    ports:
+      - published: 5001
+        target: 5000
+
+  service3-suit-gen:
+    container_name: suit
+    image: myounis789/suit:latest
+    build: ./Service3
+    ports:
+      - published: 5002
+        target: 5000
+  backend:
+    container_name: card
+    image: myounis789/card:latest
+    build: ./Service4
+    ports:
+      - published: 5003
+        target: 5000
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - published: 80
+        target: 80
+    volumes:
+      - type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
