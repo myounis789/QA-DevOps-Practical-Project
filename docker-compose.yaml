@@ -30,14 +30,3 @@ services:
     ports:
       - published: 5003
         target: 5000
-
-  nginx:
-    container_name: nginx
-    image: nginx:latest
-    ports:
-      - published: 80
-        target: 80
-    volumes:
-      - type: bind
-        source: ./nginx/nginx.conf
-        target: /etc/nginx/nginx.conf
