@@ -19,7 +19,7 @@ pipeline {
         }
         stage ("Run ansible and deploy") {
             steps{
-                sh "scp docker-compose.yaml ansible:/home/jenkins/docker-compose.yaml"
+                sh "scp docker-compose.yaml ansible-jenkins:/home/jenkins/docker-compose.yaml"
                 sh "ansible-playbook -v -i ansible/inventory.yaml ansible/playbook.yaml"
             }
         }
