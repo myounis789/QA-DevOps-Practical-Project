@@ -29,5 +29,4 @@ services:
     build: ./Service4
     ports:
       - published: 5003
-        target: 5000
-        
+        target: 5000   
