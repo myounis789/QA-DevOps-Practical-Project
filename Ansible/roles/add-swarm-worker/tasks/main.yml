@@ -10,10 +10,3 @@
     advertise_addr: worker-vm1
     join_token: "{{ hostvars['docker-swarm']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
     remote_addrs: [ 'docker-swarm:2377']
-
-- name: "Deploy Application"
-  docker_stack:
-    state: present
-    name: card-generator
-    compose:
-      - /home/jenkins/docker-compose.yaml
