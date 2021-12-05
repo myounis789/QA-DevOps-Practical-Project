@@ -17,3 +17,10 @@
 - name: "Retrieving swarm info"
   docker_swarm_info:
   register: swarm_info
+
+- name: Deploy stack from docker-compose file
+  docker_stack:
+    state: present
+    name: card-generator-stack
+    compose:
+      - /home/jenkins/docker-compose.yaml
