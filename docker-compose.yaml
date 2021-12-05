@@ -5,7 +5,7 @@ services:
     image: myounis789/flask-app:latest
     build: ./Service1
     ports:
-      - published: 80
+      - published: 5000
         target: 5000
     deploy:
       replicas: 2
