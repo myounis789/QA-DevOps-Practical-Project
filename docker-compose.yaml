@@ -5,8 +5,10 @@ services:
     image: myounis789/flask-app:latest
     build: ./Service1
     ports:
-      - published: 5000
+      - published: 80
         target: 5000
+    deploy:
+      replicas: 2
 
   service2-symbol-gen:
     container_name: symbol
@@ -15,6 +17,8 @@ services:
     ports:
       - published: 5001
         target: 5000
+    deploy:
+      replicas: 2
 
   service3-suit-gen:
     container_name: suit
@@ -23,10 +27,15 @@ services:
     ports:
       - published: 5002
         target: 5000
+    deploy:
+      replicas: 2
+
   backend:
     container_name: card
     image: myounis789/card:latest
     build: ./Service4
     ports:
       - published: 5003
-        target: 5000   
+        target: 5000 
+    deploy:
+      replicas: 2  
