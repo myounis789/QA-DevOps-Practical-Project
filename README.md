@@ -66,13 +66,20 @@ Version 2 of the card-generator app displays the symbol and suit of the card alo
 ## CI/CD Pipeline:
 A CI-CD pipeline was implemented in this project to allow for the automation of development in to live buildsto automate testing, building, and deploying the application. The diagram below illustrates how this is done:
 
-![CI Pipeline](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/cipipeline.png)
+![CI Pipeline](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/cipipeline.jpg)
 
 ### Jenkins:
 
 The main tool used here was Jenkins. A pipeline item was created which would locate the Jenkinsfile within the github repo and run it. Below is a screenshot of the application passing each stage of the jenkins application:
 
 ![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/jenkins.png)
+
+As you can see, the pipeline consists of 3 stages:
+* Stage 1 runs the tests.sh script to test each service of the application. Hence, if the test fails the build would also fail. It makes sense doing this first as you wouldn't want to wait for the application to build and deploy before realising it is not functioning as expected.
+
+* Stage 2 builds the images from the docker-compose.yaml file and pushes them to Docker Hub. Environment variables were used to store docker hub credentials in Jenkins as secret keys.
+
+* Stage 3 runs the ansible-playbook.yaml file to configure each vm and setup the swarm for deployment. Finally, the application is deployed and the build is a SUCCESS.
 
 
 ## Testing & Results:
