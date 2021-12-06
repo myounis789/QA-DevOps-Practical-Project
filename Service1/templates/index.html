@@ -12,16 +12,16 @@
 
 <body>
     <center>
-        <!-- <h1>Symbol: {{ symbol }} </h1>
+        <h1>Symbol: {{ symbol }} </h1>
         <h1>Suit: {{ suit }}</h1>
-        <br> -->
-        <h1 style=color:green>Your card is: The {{value}} of {{suit}}</h1>
+        <br>
+        <!-- <h1 style=color:green>Your card is: The {{value}} of {{suit}}</h1> -->
         <br>
         <h2>
             <a class="btn btn-outline-primary btn-md" type=button href="{{ url_for('server') }}"> Generate a new
                 card</a>
         </h2>
-        <h1><img src="{{image}}"></h1>
+        <h1><img src="{{image}}" width="200" height="300"></h1>
     </center>
 </body>
 
