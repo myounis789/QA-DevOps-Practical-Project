@@ -9,5 +9,5 @@ def symbol_generator():
     symbol = random.choice(symbols)
     return Response(symbol, mimetype="text/plain")
 
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma: no cover
     app.run(host="0.0.0.0", port=5001, debug=True)
