@@ -64,5 +64,15 @@ Version 2 of the card-generator app displays the symbol and suit of the card alo
 ![App Version 2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/version2.png)
 
 ## CI/CD Pipeline:
+A CI-CD pipeline was implemented in this project to allow for the automation of development in to live buildsto automate testing, building, and deploying the application. The diagram below illustrates how this is done:
+
+![CI Pipeline](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/cipipeline.png)
+
+### Jenkins:
+
+The main tool used here was Jenkins. A pipeline item was created which would locate the Jenkinsfile within the github repo and run it. Below is a screenshot of the application passing each stage of the jenkins application:
+
+![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/jenkins.png)
+
 
 ## Testing & Results:
