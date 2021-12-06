@@ -25,4 +25,4 @@ The brief for this project was to develop a service-oriented architecture of an 
 ## Project Planning:
 During the planning stages of this project, a system architecture was developed to give a visual representation of the number of VM's hosting the application, as well as how they communicate with each other. This is shown below:
 
-![System Architecture](https://github.com/myounis789/QA-DevOps-practical-project/resources/systemArchitecture.png)
+![System Architecture](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/systemArchitecture.png)
