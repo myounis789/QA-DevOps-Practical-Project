@@ -7,7 +7,6 @@ This repository contains my deliverable for the QA devops practical project.
 * [App Design](#App-Design)
 * [CI/CD Pipeline](#CI/CD-Pipeline)  
 * [Testing & Results](#Testing-&-Results)
-* [The App](#The-App)
 * [Known Issues](#Known-Issues)
 * [Future Work](#Future-Work)
 
@@ -83,7 +82,7 @@ As you can see, the pipeline consists of 3 stages:
 
 ### Docker Hub:
 
-Here is a screenshot of my DOcker Hub repo's created upon each successful Jenkins build:
+Here is a screenshot of my Docker Hub repo's created upon each successful Jenkins build:
 
 ![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/docker.png)
 
@@ -112,3 +111,9 @@ These tests were then automated via Jenkins. A tests.sh file was created which c
 
 ![test4](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service4tests.png)
 
+## Known issues:
+During the development process of my project. I would encounter a 'permission denied' error on multiple occasions when setting up new VM's for my ansible-playbook to play with. Although I have found a temporary fix to work around it, it is a risk of failing again at some point. This is an issue with GCP itself and not a matter in my hands.
+## Future Work:
+The project was a success other than the exclusion of an SQL database implementation. This is simply due to running out of time as several errors related to those mentioned above ate up a lot of my development time. In the future, an SQL Database can be added to display the last 5 cards on the webpage. 
+
+Another future implementation would be the utilisation of nexus. Nexus is a tool that is helpful for privacy of docker images. The main reason why thus was not implemented in this project is simply due to cost effective measures, as nexus requires a considerably large virtual machine which I do not have credit for on my GCP account. In the future, I can give this a go given that I have sufficient funds.
