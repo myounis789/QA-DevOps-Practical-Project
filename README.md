@@ -6,7 +6,7 @@ This repository contains my deliverable for the QA devops practical project.
 * [Project Planning](#Project-Planning)
 * [App Design](#App-Design)
 * [CI/CD Pipeline](#CI/CD-Pipeline)  
-* [Testing Services](#Testing)
+* [Testing & Results](#Testing)
 * [The App](#The-App)
 * [Known Issues](#Known-Issues)
 * [Future Work](#Future-Work)
@@ -26,3 +26,25 @@ The brief for this project was to develop a service-oriented architecture of an 
 During the planning stages of this project, a system architecture was developed to give a visual representation of the number of VM's hosting the application, as well as how they communicate with each other. This is shown below:
 
 ![System Architecture](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/systemArchitecture.png)
+
+### JIRA board:
+
+In addition to a system architecture, the JIRA console was also utilised to plan out the development process of the project. This helped keep track of project progress via burndown chart reports and sprint backlogs. 
+
+![Sprint 1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/Sprint1.png)
+
+#### Burndown Chart:
+Below is the final result of the Sprint Burndown Chart:
+
+![Burndown Chart](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/finalburndown.png)
+
+Although it's not perfect, this chart gives us a clear 
+
+### Risk Assessment:
+
+![Risk Assessment](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/riskassessment.png)
+
+## App Design:
+
+
+## Testing & Results:
