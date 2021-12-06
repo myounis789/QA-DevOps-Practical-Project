@@ -95,7 +95,7 @@ Below is a video demonstration of my Ansible in action. Although there were some
 
 #### Part 1
 
-https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/Ansible_Part1.mp4
+https://vimeo.com/653659424
 #### Part 2
 https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/Ansible_Part2.mp4
 
