@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="ansible-jenkins" name="pytest" skipped="0" tests="1" time="0.350" timestamp="2021-12-06T03:34:33.464836"><testcase classname="tests.test_mock.TestSuitGen" name="test_suit" time="0.010" /></testsuite></testsuites>
