@@ -24,18 +24,18 @@ The brief for this project was to develop a service-oriented architecture of an 
 ## Project Planning:
 During the planning stages of this project, a system architecture was developed to give a visual representation of the number of VM's hosting the application, as well as how they communicate with each other. This is shown below:
 
-![System Architecture](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/systemArchitecture.png)
+![System Architecture](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/systemArchitecture.png)
 
 ### JIRA board:
 
 In addition to a system architecture, the JIRA console was also utilised to plan out the development process of the project. This helped keep track of project progress via burndown chart reports and sprint backlogs. 
 
-![Sprint 1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/Sprint1.png)
+![Sprint 1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/Sprint1.png)
 
 #### Burndown Chart:
 Below is the final result of the Sprint Burndown Chart:
 
-![Burndown Chart](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/finalburndown.png)
+![Burndown Chart](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/finalburndown.png)
 
 Although it's not perfect, this chart gives us a clear overview of the execution of tasks against time thanks to the story points that were set. JIRA uses these story points to generate a guideline which represents the ideal birn rate. This gives the developer an insight of whether the project development schedule is on track or falling behind.
 
@@ -45,33 +45,33 @@ A risk assessment was carried out as a way of identifying potential project risk
 
 ### Before:
 
-![Risk Assessment Before](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/riskbefore.png)
+![Risk Assessment Before](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/riskbefore.png)
 
 ### After:
-![Risk Assessment After](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/riskafter.png)
+![Risk Assessment After](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/riskafter.png)
 
 ## App Design:
 
 ### Version 1:
 Version 1 of the card-generator app displays the name of the card along with its image on the webpage as shown below:
 
-![App Version 1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/version1.png)
+![App Version 1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/version1.png)
 
 ### Version 2:
 Version 2 of the card-generator app displays the symbol and suit of the card along with its image on the webpage as shown below:
 
-![App Version 2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/version2.png)
+![App Version 2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/version2.png)
 
 ## CI/CD Pipeline:
 A CI-CD pipeline was implemented in this project to allow for the automation of development in to live buildsto automate testing, building, and deploying the application. The diagram below illustrates how this is done:
 
-![CI Pipeline](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/cipipeline.jpg)
+![CI Pipeline](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/cipipeline.jpg)
 
 ### Jenkins:
 
 The main tool used here was Jenkins. A pipeline item was created which would locate the Jenkinsfile within the github repo and run it. Below is a screenshot of the application passing each stage of the jenkins application:
 
-![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/jenkins.png)
+![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/jenkins.png)
 
 As you can see, the pipeline consists of 3 stages:
 * Stage 1 runs the tests.sh script to test each service of the application. Hence, if the test fails the build would also fail. It makes sense doing this first as you wouldn't want to wait for the application to build and deploy before realising it is not functioning as expected.
@@ -84,7 +84,7 @@ As you can see, the pipeline consists of 3 stages:
 
 Here is a screenshot of my Docker Hub repo's created upon each successful Jenkins build:
 
-![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/docker.png)
+![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/docker.png)
 
 
 These are used by ansible to deploy on the docker stack which manages the docker-swarm.
@@ -97,19 +97,19 @@ These tests were then automated via Jenkins. A tests.sh file was created which c
 
 ### Service 1: FrontEnd
 
-![test1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service1tests.png)
+![test1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/service1tests.png)
 
 ### Service 2: symbol-generator
 
-![test2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service2tests.png)
+![test2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/service2tests.png)
 
 ### Service 3: suit-generator
 
-![test3](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service3tests.png)
+![test3](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/service3tests.png)
 
 ### Service 4: BackEnd
 
-![test4](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service4tests.png)
+![test4](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/service4tests.png)
 
 ## Known issues:
 During the development process of my project. I would encounter a 'permission denied' error on multiple occasions when setting up new VM's for my ansible-playbook to play with. Although I have found a temporary fix to work around it, it is a risk of failing again at some point. This is an issue with GCP itself and not a matter in my hands.
