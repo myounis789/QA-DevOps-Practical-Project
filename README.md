@@ -2,11 +2,11 @@
 This repository contains my deliverable for the QA devops practical project.
 
 ## Contents:
-* [Project Brief](#Project-Brief)  
+* [Project Brief](##Project-Brief)  
 * [Project Planning](#Project-Planning)
 * [App Design](#App-Design)
 * [CI/CD Pipeline](#CI/CD-Pipeline)  
-* [Testing & Results](#Testing)
+* [Testing & Results](#Testing-&-Results)
 * [The App](#The-App)
 * [Known Issues](#Known-Issues)
 * [Future Work](#Future-Work)
@@ -38,13 +38,31 @@ Below is the final result of the Sprint Burndown Chart:
 
 ![Burndown Chart](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/finalburndown.png)
 
-Although it's not perfect, this chart gives us a clear 
+Although it's not perfect, this chart gives us a clear overview of the execution of tasks against time thanks to the story points that were set. JIRA uses these story points to generate a guideline which represents the ideal birn rate. This gives the developer an insight of whether the project development schedule is on track or falling behind.
 
+Furthermore, it is evident that the burndown chart doesn't necessarily start from the first day of the sprint. This is because I had forgotten to add story points to my user-stories and tasks, which were added a day later than the project start date. This is something that I can keep in mind to avoid in the future.
 ### Risk Assessment:
+A risk assessment was carried out as a way of identifying potential project risks. Below are the risks identified before and after development.
 
-![Risk Assessment](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/riskassessment.png)
+### Before:
+
+![Risk Assessment Before](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/riskbefore.png)
+
+### After:
+![Risk Assessment After](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/riskafter.png)
 
 ## App Design:
 
+### Version 1:
+Version 1 of the card-generator app displays the name of the card along with its image on the webpage as shown below:
+
+![App Version 1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/version1.png)
+
+### Version 2:
+Version 2 of the card-generator app displays the symbol and suit of the card along with its image on the webpage as shown below:
+
+![App Version 2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/version2.png)
+
+## CI/CD Pipeline:
 
 ## Testing & Results:
