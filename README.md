@@ -81,5 +81,34 @@ As you can see, the pipeline consists of 3 stages:
 
 * Stage 3 runs the ansible-playbook.yaml file to configure each vm and setup the swarm for deployment. Finally, the application is deployed and the build is a SUCCESS.
 
+### Docker Hub:
+
+Here is a screenshot of my DOcker Hub repo's created upon each successful Jenkins build:
+
+![Jenkins](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/docker.png)
+
+
+These are used by ansible to deploy on the docker stack which manages the docker-swarm.
+
 
 ## Testing & Results:
+In order to test the application, pytest was used. This gives i=us the benefit of using unit mock_tests to mock data for http get/post requests. Mocking helps test random generators as it forces the output of the random statement before the test is run. 
+
+These tests were then automated via Jenkins. A tests.sh file was created which cd's into each directory (Service1-Service4) and runs the test file within that directory. The following results were obtained:
+
+### Service 1: FrontEnd
+
+![test1](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service1tests.png)
+
+### Service 2: symbol-generator
+
+![test2](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service2tests.png)
+
+### Service 3: suit-generator
+
+![test3](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service3tests.png)
+
+### Service 4: BackEnd
+
+![test4](https://github.com/myounis789/QA-DevOps-Practical-Project/blob/dev/resources/service4tests.png)
+
