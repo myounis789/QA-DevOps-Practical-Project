@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages{
-        // stage('Run service tests') {
-        //     steps{
-        //         sh "bash test.sh"
-        //     }
-        // } 
+        stage('Run service tests') {
+            steps{
+                sh "bash test.sh"
+            }
+        } 
         stage ('Build and push images to docker') {
             environment {
                 DOCKER_UNAME = credentials('docker_uname')
