@@ -13,7 +13,7 @@ def server():
     json = card_gen.json()
     image = json["image"]
     value = json["value"]
-    return render_template('index.html', image=image, value=value)
+    return render_template('index.html', image=image, value=value, suit=suit.text)
     # return render_template('index.html', symbol=symbol.text, suit=suit.text, image=image)
 
 if __name__ == "__main__":
