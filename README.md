@@ -89,6 +89,16 @@ Here is a screenshot of my Docker Hub repo's created upon each successful Jenkin
 
 These are used by ansible to deploy on the docker stack which manages the docker-swarm.
 
+### Ansible:
+
+Below is a video demonstration of my Ansible in action. Although there were some small issues encountered. The process was successful in the end and the VM's were configured effectively 
+
+#### Part 1
+
+https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/Ansible_Part1.mp4
+#### Part 2
+https://github.com/myounis789/QA-DevOps-Practical-Project/blob/main/resources/Ansible_Part2.mp4
+
 
 ## Testing & Results:
 In order to test the application, pytest was used. This gives i=us the benefit of using unit mock_tests to mock data for http get/post requests. Mocking helps test random generators as it forces the output of the random statement before the test is run. 
